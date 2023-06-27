@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <title>Library</title>
+</head>
+<body>
+    <div id="top-bar">
+        <span id="your-library">Your Library:</span>
+        <span class="material-symbols-outlined">
+            all_inclusive
+        </span>
+        <div id="stats">
+            <div id="pg-read">
+                <span>pages read: </span>
+                <span id="pg-output">0</span>
+            </div>
+            <div id="bk-read">
+                <span>books read: </span>
+                <span id="bk-output">0</span>
+            </div>
+        </div>
+    </div>
+    <div id="search-bar">
+        <input id="search-field">
+        <button id="search-button">search</button>
+    </div>
+    <div id="cards">
+        <div class="card">
+            <img src="src/sorcerer.jpg">
+            <div class="card-info">
+                <span class="title">Harry Potter: Sorcerer's Stone</span>
+                <div class="card-details">
+                    <span class="author">J.K. Rowling</span>
+                    <span class="year">2015</span>
+                </div>
+                <div class="card-bottom">
+                    <div class="read-indicator" read="True"></div>
+                    <div class="card-bottom-right">
+                        <span class="pages">309p</span>
+                        <span class="isbn">9781781100486</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
