@@ -81,7 +81,7 @@ img{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    width: 100%;
 }
 .card-details{
     display: flex;
@@ -131,4 +131,15 @@ img{
     font-weight: 400;
     font-size: 14px;
     color: #AFAFAF;
+}
+#no-books{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #AFAFAF;
+    font-size: 23px;
+    font-weight: 200;
 }

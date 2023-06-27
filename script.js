@@ -1,5 +1,3 @@
-document.getElementById('read-indicator').addEventListener('click', toggleReadBook);
-document.getElementById('search-button').addEventListener('click', loadData);
 let books = [];
 let bookStat = {'Pages':0, 'Books': 0}
 
@@ -12,6 +10,8 @@ function Book(title, author, image, year, pages, isbn) {
   this.isbn = isbn;
 }
 
+document.getElementById('search-button').addEventListener('click', loadData);
+
 function loadData() {
     // load data from google book api searching with 'search-field' text
     const searchInput = document.getElementById("search-field").value;
@@ -20,6 +20,10 @@ function loadData() {
       .then((response) => response.json())
       .then((data) => {
         // gather required data
+        if(data.items == null) {
+          alert("No book found!");
+          return;
+        }
         pages = data.items[0].volumeInfo.pageCount == 0 ? 'unknown' : data.items[0].volumeInfo.pageCount;
         let book = new Book(
           data.items[0].volumeInfo.title,
@@ -42,6 +46,11 @@ function loadData() {
         }
         // add the book to the books array
         books.push(book);
+
+        // if books is not empty, remove the 'no books' dialog #no-books
+        if (books.length > 0) {
+          document.getElementById("no-books").style.display = "none";
+        }
 
         // create card
         createCard(book);
