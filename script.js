@@ -1,14 +1,19 @@
 let books = [];
 let bookStat = {'Pages':0, 'Books': 0}
 
-function Book(title, author, image, year, pages, isbn) {
-  this.title = title;
-  this.author = author;
-  this.image = image;
-  this.year = year;
-  this.pages = pages;
-  this.isbn = isbn;
+class Book{
+
+  constructor(title, author, image, year, pages, isbn){
+    this.title = title;
+    this.author = author;
+    this.image = image;
+    this.year = year;
+    this.pages = pages;
+    this.isbn = isbn;
+  }
+
 }
+
 
 document.getElementById('search-button').addEventListener('click', loadData);
 
